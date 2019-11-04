@@ -1,0 +1,16 @@
+D:\191\KiemthuPhanmem\Assignment\WorldCup\WorldCup\bin\Debug\WorldCup.dll
+D:\191\KiemthuPhanmem\Assignment\WorldCup\WorldCup\bin\Debug\WorldCup.pdb
+D:\191\KiemthuPhanmem\Assignment\WorldCup\WorldCup\obj\Debug\WorldCup.csprojAssemblyReference.cache
+D:\191\KiemthuPhanmem\Assignment\WorldCup\WorldCup\obj\Debug\WorldCup.csproj.CoreCompileInputs.cache
+D:\191\KiemthuPhanmem\Assignment\WorldCup\WorldCup\obj\Debug\WorldCup.dll
+D:\191\KiemthuPhanmem\Assignment\WorldCup\WorldCup\obj\Debug\WorldCup.pdb
+D:\191\KiemthuPhanmem\Assignment\WorldCup\WorldCup\bin\Debug\WC_Database.mdf
+D:\191\KiemthuPhanmem\Assignment\WorldCup\WorldCup\bin\Debug\WC_Database_log.ldf
+D:\btltest\KTPMM\WorldCup\bin\Debug\WC_Database.mdf
+D:\btltest\KTPMM\WorldCup\bin\Debug\WC_Database_log.ldf
+D:\btltest\KTPMM\WorldCup\bin\Debug\WorldCup.dll
+D:\btltest\KTPMM\WorldCup\bin\Debug\WorldCup.pdb
+D:\btltest\KTPMM\WorldCup\obj\Debug\WorldCup.csprojAssemblyReference.cache
+D:\btltest\KTPMM\WorldCup\obj\Debug\WorldCup.csproj.CoreCompileInputs.cache
+D:\btltest\KTPMM\WorldCup\obj\Debug\WorldCup.dll
+D:\btltest\KTPMM\WorldCup\obj\Debug\WorldCup.pdb
