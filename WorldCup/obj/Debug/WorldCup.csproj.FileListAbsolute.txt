@@ -14,3 +14,11 @@ D:\btltest\KTPMM\WorldCup\obj\Debug\WorldCup.csprojAssemblyReference.cache
 D:\btltest\KTPMM\WorldCup\obj\Debug\WorldCup.csproj.CoreCompileInputs.cache
 D:\btltest\KTPMM\WorldCup\obj\Debug\WorldCup.dll
 D:\btltest\KTPMM\WorldCup\obj\Debug\WorldCup.pdb
+D:\191\KiemthuPhanmem\BTL_Temp\drive-download-20191104T153806Z-001\WorldCup\obj\Debug\WorldCup.csprojAssemblyReference.cache
+D:\191\KiemthuPhanmem\BTL_Temp\drive-download-20191104T153806Z-001\WorldCup\obj\Debug\WorldCup.csproj.CoreCompileInputs.cache
+D:\191\KiemthuPhanmem\BTL_Temp\drive-download-20191104T153806Z-001\WorldCup\obj\Debug\WorldCup.dll
+D:\191\KiemthuPhanmem\BTL_Temp\drive-download-20191104T153806Z-001\WorldCup\obj\Debug\WorldCup.pdb
+D:\191\KiemthuPhanmem\BTL_Temp\drive-download-20191104T153806Z-001\WorldCup\bin\Debug\WC_Database.mdf
+D:\191\KiemthuPhanmem\BTL_Temp\drive-download-20191104T153806Z-001\WorldCup\bin\Debug\WC_Database_log.ldf
+D:\191\KiemthuPhanmem\BTL_Temp\drive-download-20191104T153806Z-001\WorldCup\bin\Debug\WorldCup.dll
+D:\191\KiemthuPhanmem\BTL_Temp\drive-download-20191104T153806Z-001\WorldCup\bin\Debug\WorldCup.pdb

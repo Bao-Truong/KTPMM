@@ -21,7 +21,7 @@ namespace WorldCup
             try
             {
                 con = new System.Data.SqlClient.SqlConnection();
-                con.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB; AttachDbFilename =D:\\191\\KIEMTHUPHANMEM\\ASSIGNMENT\\WORLDCUP\\WORLDCUP\\WC_DATABASE.MDF;Integrated Security=True;";
+                con.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB; AttachDbFilename =D:\\191\\KiemthuPhanmem\\BTL_Temp\\drive-download-20191104T153806Z-001\\WorldCup\\WC_Database.mdf;Integrated Security=True;";
                 con.Open();
                 //Console.Write("Connection opened\n");
                 return true;

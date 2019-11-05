@@ -8,13 +8,27 @@ namespace WorldCup
 {
     public class TranDau
     {
+        Summary summary = new Summary();
         TeamMatch Doi1;
         TeamMatch Doi2;
         int tiso_doi1;
         int tiso_doi2;
         int loai;//1: dau vong; 2: dau loai truc tiep
-        public void xulidauvong()//xu ly neu la vong dau vong
+        public TranDau(TeamMatch TeamA, TeamMatch TeamB)
         {
+            Doi1 = TeamA;
+            Doi2 = TeamB;
+        }
+        public void LayTiso(int goal1, int goal2)
+        {
+            tiso_doi1 = goal1;
+            tiso_doi2 = goal2;
+
+            Doi1.goal = goal1;
+            Doi2.goal = goal2;
+        } 
+        public void xulidauvong()//xu ly neu la vong dau vong
+        {            
             if (tiso_doi1 == tiso_doi2)
             {
                 Doi1.thang = 0;
@@ -34,7 +48,7 @@ namespace WorldCup
                 return;//WARN: chua hien thuc:Cong 3 diem cho database cua doi co ID == Doi2.ID;
             }
         }
-        public void xulidaubang()
+        public void xuli_loaitructiep()
         {
             if (tiso_doi1 == tiso_doi2)//hai doi hoa nhau=> da hiep phu
             {

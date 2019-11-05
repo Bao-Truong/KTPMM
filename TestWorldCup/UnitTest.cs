@@ -18,6 +18,7 @@ namespace TestWorldCup
             db.exeSQL(req);
             req = "DELETE dbo.TeamMatch";
             db.exeSQL(req);
+            db.DisConnect();
         }
         
         [TestCase(5,6,11)]
@@ -34,8 +35,11 @@ namespace TestWorldCup
         [Test]
         public void WhoWin()
         {
-            TeamMatch teamA = new TeamMatch(1,1);
-            TeamMatch teamB = new TeamMatch(2,1);
+            Team x= new Team(1,1);
+            Team y = new Team(2, 1);
+
+            TeamMatch teamA = new TeamMatch(x);
+            TeamMatch teamB = new TeamMatch(y);
             teamA.goal=(5); //Team B win
             teamB.goal=(6);                
             Summary sum = new Summary();
@@ -48,10 +52,10 @@ namespace TestWorldCup
         [Test]
         public void RegisterTeam()
         {
-            TeamMatch TeamA = new TeamMatch(1,1);           
+            Team TeamA = new Team(1,1);           
             bool expect = false;
-            Character[] Team= TeamA.registerTeam(1, 2, 1, 12);
-            for (int a = 0; a < Team.Length; a++)
+            List<Character> Team= TeamA.registerTeam(1, 2, 1, 12);
+            for (int a = 0; a < Team.Count; a++)
             {                
                     Console.Write(Team[a].ID1);                
             }
@@ -69,16 +73,16 @@ namespace TestWorldCup
             bool x=bo.assignBoard("A", 1);
             Assert.AreEqual(true, x);
         }
-        [Test]
-        [ExpectedException(typeof(ArgumentException), ExpectedMessage = "The Number of Player is not enough.")]
+        [Test]        
         public void BeforeMatch()
         {
             for (int i = 0; i < 1; i++)
             {
-                TeamMatch team = new TeamMatch(i,3);
-                team.registerTeam(1, 1, 1, 5);
-                bool x =team.Regis_beforeMatch();
-                Assert.AreEqual(false, x);
+                Team team = new Team(3,3);
+                team.registerTeam(1, 1, 1, 11);
+                TeamMatch winner = new TeamMatch(team);
+                bool x = winner.Regis_beforeMatch(team);
+                Assert.AreEqual(true, x);
             }
         }
     }

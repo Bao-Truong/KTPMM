@@ -11,11 +11,12 @@ namespace WorldCup
         private Character[] allTeam;
         public int Area;// đại diện khu vực theo thứ tự trong mô tả từ 1->7
         public int TeamID;
-        public int score = 0;
-        public int goal;
-        public int current_onField;
+        //public int score = 0;
+        //public int goal;
+        //public int current_onField;
         public bool disqualified = false;
-        public Character[] AllTeam { get => allTeam; set => allTeam = value; }
+        public List<Character> AllTeam = new List<Character>();
+        public List<Character> CauThu_info = new List<Character>();
         public object TestContext { get; private set; }
         //public TeamMatch()
         //{
@@ -52,44 +53,50 @@ namespace WorldCup
             return true;
         }*/
 
-        public Character[] registerTeam(int HLV, int TLHLV, int SSV, int CauThu) // cầu thủ <=22
+        public List<Character> registerTeam(int HLV, int TLHLV, int SSV, int CauThu) // cầu thủ <=22
         {
-
             bool qualified = checkComponent(HLV, TLHLV, SSV, CauThu);
             if (qualified == false)
             {
                 return null;
             }
 
-            AllTeam = new Character[HLV + TLHLV + SSV + CauThu];
+            //AllTeam = new Character[HLV + TLHLV + SSV + CauThu];
             int j = 0;
             int i;
 
             Character HLVs = new Character(1, TeamID);
 
 
-            AllTeam[j] = HLVs;
+            //AllTeam[j] = HLVs;
+            AllTeam.Add(HLVs);
             j++;
 
             for (i = 0; i < TLHLV; i++)
             {
                 Character TLHLVs = new Character(2, TeamID);
-                AllTeam[j] = TLHLVs;
+                //AllTeam[j] = TLHLVs;
+                AllTeam.Add(TLHLVs);
                 j++;
             }
 
             Character SSVs = new Character(3, TeamID);
-            AllTeam[j] = SSVs;
+            AllTeam.Add(SSVs);
             j++;
             Console.Write("Cau thu: " + CauThu);
             for (i = 0; i < CauThu; i++)
             {
                 Character CauThus = new Character(i, 4, TeamID);
-                AllTeam[j] = CauThus;
+                //AllTeam[j] = CauThus;
+                AllTeam.Add(CauThus);
+                CauThu_info.Add(CauThus);
                 j++;
             }
+            
             return AllTeam;
         }
+
+        
 
         private Boolean checkComponent(int HLV, int TLHLV, int SSV, int CauThu)
         {
@@ -100,39 +107,6 @@ namespace WorldCup
             else
                 throw new ArgumentException("Exceed number.");
         }
-        public int getscore(String s)
-        {
-            if (s.Equals("win"))
-            {
-                score += 3;
-                return 3;
-            }
-            else if (s.Equals("draw"))
-            {
-                score += 1;
-                return 1;
-            }
-            else if (s.Equals("lose"))
-            {
-                score += 0;
-                return 0;
-            }
-            return -1;
-        }
-        /*public Boolean Regis_beforeMatch()
-        {
-            Database db = new Database();
-            req = "SELECT COUNT(*) FROM dbo.Character WHERE Role=4 AND TeamId=" + TeamID;
-            dr = db.readSQL(req);
-            if (dr.Read())
-            {
-                int soCauThu = Int32.Parse(dr.GetValue(0).ToString());
-                if (soCauThu < 7)
-                    throw new ArgumentException("The Number of Player is not enough.");
-            }
-            else
-                return false;
-            return true;
-        }*/
+        
     }
 }

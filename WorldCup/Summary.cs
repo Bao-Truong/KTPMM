@@ -41,5 +41,11 @@ namespace WorldCup
             
             return 1;
         }
+
+        public void Summary_updateDB(TranDau match )
+        {
+            Database db = new Database();
+
+        }
     }
 }
