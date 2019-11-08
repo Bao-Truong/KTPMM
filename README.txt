@@ -1,4 +1,4 @@
---------------------------
+﻿--------------------------
 Character.cs: cá nhân mỗi người trong 1 đội (tính cả HLV, trợ lý HLV, SSV, cầu thủ) (role theo thứ tự t cho là 1,2,3,4 của mỗi người)
 
 ---------------------------
@@ -31,4 +31,4 @@ Các method:
 	+readSQL(String sql): return cái SqldataReader, xem vd mẫu trong hàm CheckArea() của TeamMatch.cs
 	+disconnect(): disconnect sau khi truy vấn
 
----------------------------
+-----------------------------
