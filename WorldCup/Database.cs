@@ -21,7 +21,7 @@ namespace WorldCup
             try
             {
                 con = new System.Data.SqlClient.SqlConnection();
-                con.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB; AttachDbFilename =D:\\191\\KiemthuPhanmem\\BTL_Temp\\drive-download-20191104T153806Z-001\\WorldCup\\WC_Database.mdf;Integrated Security=True;";
+                con.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB; AttachDbFilename =D:\\191\\KiemthuPhanmem\\BTL_Temp\\drive-download-20191104T153806Z-001\\WorldCup\\WC_Database.mdf;Integrated Security=True;MultipleActiveResultSets=True;";
                 con.Open();
                 //Console.Write("Connection opened\n");
                 return true;
@@ -35,6 +35,7 @@ namespace WorldCup
         {
             cmd = new SqlCommand(sql, con);
             Console.Write("sql: " + sql);
+
             cmd.ExecuteNonQuery();  // dùng khi có insert, update gì đó, nếu chỉ select thôi thì ko cần
         }
         public SqlDataReader readSQL(String sql)

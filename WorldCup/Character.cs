@@ -21,25 +21,25 @@ namespace WorldCup
         public int MaxGoal { get => maxGoal; set => maxGoal = value; }
         public int ID1 { get => ID; set => ID = value; }
 
-        public Character(int id, int ro, int teamid)
+        public Character( int ro, int teamid)
         {
             Database db = new Database();
-            String req = "INSERT INTO Character(Id,Role,TeamId) VALUES("+id+","+ro+","+teamid+")";
+            String req = "INSERT INTO Nguoi(VaiTro,Doi_ID) VALUES("+ro+","+teamid+")";
+            
             db.exeSQL(req);
-            this.Role = ro;
-            this.ID = id;
+            this.Role = ro;           
             fault = 0;
             maxGoal = 0;
             db.DisConnect();
         }
-        public Character(int ro,int teamid)
-        {
-            Database db = new Database();
-            String req = "INSERT INTO Character(Name,Role,TeamId) VALUES('Boss'," + ro + "," + teamid + ")";
-            db.exeSQL(req);
-            this.Role = ro;
-            db.DisConnect();
-        }
+        //public Character(int ro,int teamid)
+        //{
+        //    Database db = new Database();
+        //    String req = "INSERT INTO Nguoi(Ten,VaiTro,Doi_ID) VALUES('Boss'," + ro + "," + teamid + ")";
+        //    db.exeSQL(req);
+        //    this.Role = ro;
+        //    db.DisConnect();
+        //}
 
     }
 }

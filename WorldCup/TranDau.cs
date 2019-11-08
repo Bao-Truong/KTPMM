@@ -13,21 +13,42 @@ namespace WorldCup
         TeamMatch Doi2;
         int tiso_doi1;
         int tiso_doi2;
-        int loai;//1: dau vong; 2: dau loai truc tiep
-        public TranDau(TeamMatch TeamA, TeamMatch TeamB)
+        int loai;//0: Playoff  1: dau vong; 2: dau loai truc tiep
+        int VongDau_id;//0:playoff, 1:Bảng, 2:1/16 3:Tứ kết 4:Bán kết 5: Chung kết
+        public TranDau(TeamMatch TeamA, TeamMatch TeamB,int type,int TranDauID, int vongdau)
         {
+            loai = type;
+            VongDau_id = vongdau;
+            Database db = new Database();            
+            db.exeSQL("INSERT INTO dbo.TranDau(Id,DoiTran1_ID,DoiTran2_ID,Loai,VongDau_ID) VALUES ("+TranDauID+"," + TeamA.TeamID + "," + TeamB.TeamID+","+type+ "," + vongdau+ ")");
             Doi1 = TeamA;
             Doi2 = TeamB;
+            db.DisConnect();
         }
-        public void LayTiso(int goal1, int goal2)
+        public void LayTiso(int goal1, int goal2,int Matchid)
         {
             tiso_doi1 = goal1;
             tiso_doi2 = goal2;
 
             Doi1.goal = goal1;
             Doi2.goal = goal2;
+            Database db = new Database();
+            db.exeSQL("UPDATE TranDau SET SBTDoi1="+goal1+","+"SBTDoi2="+goal2+" WHERE Id="+Matchid );
+            db.DisConnect();
         } 
-        public void xulidauvong()//xu ly neu la vong dau vong
+        public void xuliTranDau(int type)
+        {
+            if(type==0)
+            {
+                xulidauvong();
+            }
+            else
+            {
+                xuli_loaitructiep();
+            }
+        }
+        
+        public void xulidauvong()//xu ly neu la vong dau vong (vòng bảng)
         {            
             if (tiso_doi1 == tiso_doi2)
             {

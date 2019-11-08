@@ -26,11 +26,18 @@ namespace WorldCup
         public List<Character> DuBi = new List<Character>();
         public object TestContext { get; private set; }
         
-        public TeamMatch(Team team)
+        public TeamMatch(int teamID)
         {
+            this.TeamID = teamID;
+            //Database db = new Database();
+            //db.readSQL("SELECT id FROM dbo.DoiBong WHERE Id=" + teamID);
+            //dr = db.readSQL(req);// dùng để lấy dữ liệu từ DB
+            //while (dr.Read())
+            //{
+            //    this.TeamID = Int32.Parse( dr.GetValue(0).ToString());               
+            //}
             //bool check = CheckArea(Area);            
-            this.TeamID = team.TeamID;
-            this.Area = team.Area;
+                     
         }
 
         public bool CheckArea(int area)
@@ -124,7 +131,8 @@ namespace WorldCup
         public Boolean Regis_beforeMatch(Team team)
         {            
             Database db = new Database();
-            req = "SELECT COUNT(*) FROM dbo.Character WHERE Role=4 AND TeamId=" + TeamID;
+            req = "SELECT COUNT(*) FROM dbo.Nguoi WHERE VaiTro=4 AND Doi_Id=" + TeamID;
+            Console.Write("Teamid: " + TeamID);
             dr=db.readSQL(req);
             if (dr.Read())
             {
@@ -137,7 +145,6 @@ namespace WorldCup
                     int numof_member = temp.Count;
                     for (int i = 0; i < numof_member && i < 11; i++)
                     {
-
                         PlayeronField.Add(temp[i]);
                     }
                     if (numof_member > 11)
@@ -147,10 +154,7 @@ namespace WorldCup
                         {
                             DuBi.Add(temp[i]);
                         }
-                    }
-                    Console.Write("toan bo thanh vien: " + numof_member);
-                    Console.Write("Player on field: " + PlayeronField.Count);
-                    Console.Write("Du bi : " + DuBi.Count);
+                    }                    
 
 
                 }

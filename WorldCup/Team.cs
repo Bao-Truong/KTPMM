@@ -16,7 +16,7 @@ namespace WorldCup
         //public int current_onField;
         public bool disqualified = false;
         public List<Character> AllTeam = new List<Character>();
-        public List<Character> CauThu_info = new List<Character>();
+        public List<Character> CauThu_info = new List<Character>(); //<=22
         public object TestContext { get; private set; }
         //public TeamMatch()
         //{
@@ -24,7 +24,9 @@ namespace WorldCup
         //}
         public Team(int id, int Area)
         {
-            //bool check = CheckArea(Area);            
+            //bool check = CheckArea(Area);  
+            Database db = new Database();
+            db.exeSQL("INSERT INTO DoiBong(id,KV) VALUES(" + id + "," + Area + ")");            
             this.TeamID = id;
             this.Area = Area;
         }
@@ -65,7 +67,7 @@ namespace WorldCup
             int j = 0;
             int i;
 
-            Character HLVs = new Character(1, TeamID);
+            Character HLVs = new Character(1,TeamID);
 
 
             //AllTeam[j] = HLVs;
@@ -83,10 +85,10 @@ namespace WorldCup
             Character SSVs = new Character(3, TeamID);
             AllTeam.Add(SSVs);
             j++;
-            Console.Write("Cau thu: " + CauThu);
+            
             for (i = 0; i < CauThu; i++)
             {
-                Character CauThus = new Character(i, 4, TeamID);
+                Character CauThus = new Character(4, TeamID);
                 //AllTeam[j] = CauThus;
                 AllTeam.Add(CauThus);
                 CauThu_info.Add(CauThus);

@@ -1,0 +1,12 @@
+D:\191\KiemthuPhanmem\BTL_Temp\drive-download-20191104T153806Z-001\ConsoleApp1\bin\Debug\WC_Database.mdf
+D:\191\KiemthuPhanmem\BTL_Temp\drive-download-20191104T153806Z-001\ConsoleApp1\bin\Debug\WC_Database_log.ldf
+D:\191\KiemthuPhanmem\BTL_Temp\drive-download-20191104T153806Z-001\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+D:\191\KiemthuPhanmem\BTL_Temp\drive-download-20191104T153806Z-001\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+D:\191\KiemthuPhanmem\BTL_Temp\drive-download-20191104T153806Z-001\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+D:\191\KiemthuPhanmem\BTL_Temp\drive-download-20191104T153806Z-001\ConsoleApp1\bin\Debug\WorldCup.dll
+D:\191\KiemthuPhanmem\BTL_Temp\drive-download-20191104T153806Z-001\ConsoleApp1\bin\Debug\WorldCup.pdb
+D:\191\KiemthuPhanmem\BTL_Temp\drive-download-20191104T153806Z-001\ConsoleApp1\obj\Debug\ConsoleApp1.csprojAssemblyReference.cache
+D:\191\KiemthuPhanmem\BTL_Temp\drive-download-20191104T153806Z-001\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+D:\191\KiemthuPhanmem\BTL_Temp\drive-download-20191104T153806Z-001\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CopyComplete
+D:\191\KiemthuPhanmem\BTL_Temp\drive-download-20191104T153806Z-001\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+D:\191\KiemthuPhanmem\BTL_Temp\drive-download-20191104T153806Z-001\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
